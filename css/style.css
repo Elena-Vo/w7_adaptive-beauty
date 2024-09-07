@@ -1,0 +1,574 @@
+body {
+  font-family: "Jost", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto 671px auto auto auto 678px auto 555px;
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* шапка сайта */
+header {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20% auto 15%;
+  padding: 10px 0;
+  border-bottom: 2px solid #ddd;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  padding-left: 0;
+  font-size: 18px;
+}
+
+nav ul :last-child {
+  gap: 0px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.header-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.header-icons a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
+/* Баннер */
+.banner {
+  grid-column: 1 / -1;
+  background: url("../assets/img/banner1.png") no-repeat center center/cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-left: 10%;
+  color: black;
+  width: 100%;
+}
+
+.banner-content {
+  margin: 8% 0 5% 5%;
+}
+
+.banner span {
+  color: #f6623e;
+  font-size: 26px;
+}
+
+.banner h1 {
+  font-size: 48px;
+}
+
+.banner p {
+  font-size: 18px;
+  padding-bottom: 40px;
+}
+
+.banner .btn-shop {
+  padding: 15px 30px;
+  background-color: #f6623e;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* Секция под баннером */
+.section-title {
+  grid-column: 4 / 10;
+  text-align: center;
+  padding: 60px 0 20px 0;
+}
+
+.section-title h2 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.section-title .line {
+  width: 100px;
+  height: 3px;
+  background-color: #f6623e;
+  margin: 10px auto;
+}
+
+.section-title p {
+  font-size: 18px;
+  color: #666;
+}
+
+/* Секция с карточками товара */
+.cards-section {
+  grid-column: 2 / 12;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  height: 456px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card h4 {
+  font-size: 18px;
+  margin-left: 20%;
+}
+
+.card p {
+  font-size: 14px;
+  color: #666;
+  margin-left: 15%;
+  text-align: center;
+}
+
+/* Секция с  тремя иконками */
+.icons-section {
+  grid-column: 4 / 10;
+  text-align: center;
+  padding: 60px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.icon-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-box img {
+  font-size: 48px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.icon-box h4 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.icon-box p {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  max-width: 80%;
+}
+/* Большая секция с девушками */
+.large-section {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+
+.large-section .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10%;
+}
+
+.large-section .content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.large-section .content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.large-section .content .btn-shop {
+  padding: 15px 30px;
+  background-color: #ff6347;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  width: fit-content;
+}
+
+.large-section .cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.large-section .cards .card {
+  height: 335px;
+}
+
+.large-section .cards .large-card {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  height: 678px;
+}
+
+/* Подвал  */
+footer {
+  grid-column: 1 / 13;
+  background: url("../assets/img/banner2.png");
+  color: black;
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+footer .footer-left,
+footer .footer-center,
+footer .footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu1 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+footer .footer-left h3,
+footer .footer-center h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+footer .footer-left p,
+footer .footer-center p {
+  font-size: 14px;
+  color: black;
+}
+
+.upline {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 40px;
+}
+
+.upline button {
+  margin-left: 150px;
+  color: #f6623e;
+  border: none;
+}
+
+footer h3 {
+  font-weight: bold;
+}
+
+footer .footer-center .line {
+  width: 400px;
+  height: 3px;
+  background-color: black;
+  margin: 10px 0;
+}
+
+footer .footer-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+footer .footer-menu a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+
+footer .social-icons,
+footer .payment-icons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+footer .social-icons a,
+footer .payment-icons a {
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+}
+
+footer .trademark {
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Адаптация для планшетов  */
+@media (max-width: 800px) {
+  .container {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(8, auto);
+    gap: 10px;
+  }
+
+  header {
+    grid-template-columns: 1fr;
+    grid-column: 2 / -1;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .header-icons {
+    justify-content: center;
+    margin-top: 2%;
+  }
+
+  .banner {
+    height: 400px;
+    width: 100%;
+  }
+
+  .banner-content {
+    margin: 5% 0 0 20%;
+  }
+  .banner h1 {
+    font-size: 36px;
+  }
+
+  .banner p {
+    font-size: 16px;
+  }
+
+  .section-title {
+    grid-column: 3 / 6;
+    padding: 0 0 15% 0;
+  }
+
+  .cards-section {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column: 2 / -1;
+  }
+
+  .icons-section {
+    grid-column: 2 / -1;
+    gap: 20px;
+    padding: 3% 0;
+  }
+
+  .card {
+    height: 80%;
+  }
+
+  .large-section {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .large-section .content {
+    padding-left: 20%;
+  }
+
+  .large-section .cards {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .large-section .cards {
+    grid-template-columns: 1fr;
+    grid-column: 1 /-1;
+    grid-row: auto;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+  }
+  .card img {
+    width: 95%;
+    margin-left: 20%;
+  }
+
+  .large-section .cards .large-card {
+    display: none;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  footer .footer-left,
+  footer .footer-center,
+  footer .footer-right {
+    align-items: center;
+  }
+
+  footer .footer-menu {
+    align-items: center;
+  }
+}
+
+/* Адаптация для мобильных устройств  */
+@media (max-width: 480px) {
+  .container {
+    grid-template-columns: repeat(12, 30px);
+    grid-template-rows: repeat(8, auto);
+    padding: 10px;
+  }
+
+  header {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 5px;
+    width: 55%;
+    font-size: 16px;
+  }
+
+  .banner {
+    height: 300px;
+    width: 100%;
+  }
+
+  .banner-content {
+    margin: 10% 15% 0% 0;
+  }
+  .banner h1 {
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
+
+  .banner p {
+    display: none;
+  }
+
+  .section-title {
+    display: none;
+  }
+
+  .cards-section {
+    grid-template-columns: 1fr;
+    grid-column: 1 / -1;
+    justify-content: center;
+    width: 75%;
+  }
+
+  .card {
+    height: auto;
+  }
+
+  .icons-section {
+    grid-column: 3 /-1;
+    gap: 5%;
+    justify-content: center;
+    width: 70%;
+  }
+
+  .icon-box p {
+    display: none;
+  }
+
+  .icon-box h4 {
+    font-size: 14px;
+  }
+
+  .large-section {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    height: auto;
+    width: 75%;
+  }
+
+  .large-section .content h2 {
+    font-size: 16px;
+  }
+
+  .large-section .content p {
+    font-size: 14px;
+  }
+
+  .large-section .cards {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .large-section .cards .card img {
+    height: 80%;
+    width: 80%;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+    grid-column: 2 / -1;
+  }
+
+  footer .footer-left,
+  footer .footer-center,
+  footer .footer-right {
+    align-items: center;
+    margin-bottom: 20px;
+    width: 75%;
+  }
+
+  footer .footer-center .line {
+    width: 250px;
+  }
+
+  .upline button {
+    margin-left: 100px;
+  }
+
+  footer .footer-menu {
+    align-items: center;
+  }
+
+  footer .social-icons,
+  footer .payment-icons {
+    justify-content: flex-start;
+    gap: 5px;
+    width: 70%;
+    font-size: 12px;
+  }
+  footer .trademark {
+    font-size: 16px;
+    width: 75%;
+  }
+}
